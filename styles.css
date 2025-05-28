@@ -68,7 +68,7 @@ body {
   /* Overlay central fixa sobre o carrossel */
 .overlay-central {
   position: absolute;
-  top: 42%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(33, 37, 41, 0.9); /* Cinza escuro com transparência */
