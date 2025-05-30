@@ -1,118 +1,118 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  header {
-    background-color: #1c1c1c;
-    border-bottom: 2px solid #333;
-  }
-  
-  .card {
-    border-radius: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    background-color: #3a3a3a;
-  }
-  
-  footer {
-    background-color: #1c1c1c;
-  }
-  
-  .carousel-item img {
-    /* width: 100%;
-    /* max-height: ;50% da altura da viewport */
-    object-fit: cover; */
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+header {
+  background-color: #1c1c1c;
+  border-bottom: 2px solid #333;
+}
 
- #porcaria{
-    /* border: 1px solid red; */
-    background-position: center;
-    
-    background-repeat: no-repeat;
-    height: 70vh;
-    width: 100vw;
- }
-/* Overlay central fixa sobre o carrossel */
+.card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #3a3a3a;
+}
+
+footer {
+  background-color: #1c1c1c;
+}
+
+.carousel-item img {
+  object-fit: cover;
+}
+
+#porcaria {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* Posiciona o carrossel como contexto para o overlay */
+.papai {
+  position: relative;
+}
+
+/* Overlay central fixa sobre o carrossel - 100% responsiva */
 .overlay-central {
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(33, 37, 41, 0.9); /* Cinza escuro com transparência */
+  background-color: rgba(33, 37, 41, 0.85); /* Fundo escuro com transparência */
   color: white;
-  padding: 2rem 3rem;
+  padding: 1.5rem 2rem;
   border-radius: 1rem;
   z-index: 10;
-  max-width: 90%;
+  width: 90%;
+  max-width: 600px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.overlay-central img {
+  width: 100px;
+  height: auto;
 }
 
 .modal-content {
   border: none;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
-}
-.bosta{
-  border: 1px solid red;
-  
-}
-.fifinho{
-  border: 1px solid green;
-  /* width: 450px; */
-  
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
- /* Padrão para desktop */
-
-
-/* Tablet médio */
-@media (max-width: 992px) {
-  .precos {
-    /* border: 1px solid red; */
-    /* margin-top: 650px; */
-  }
-  .gambi{
-    /* border: 1px solid rgb(168, 6, 147); */
-    margin-top: -100px; 
-  }
-
-  /* Overlay central fixa sobre o carrossel */
-.overlay-central {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(33, 37, 41, 0.9); /* Cinza escuro com transparência */
-  color: white;
-  padding: 2rem 3rem;
-  border-radius: 1rem;
-  z-index: 10;
-  max-width: 90%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-}
-
-/* Celular grande */
+/* Responsividade */
 @media (max-width: 768px) {
+  .gambi{
+    margin-top: -10%;
+  }
+  .overlay-central {
+    padding: 1rem 1.5rem;
+  }
+
+  .overlay-central h2 {
+    font-size: 1.5rem;
+  }
+
+  .overlay-central p {
+    font-size: 1rem;
+  }
+
+  .overlay-central img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gambi{
+    margin-top: -15%;
+  }
   .precos {
     margin-top: 1.5rem;
   }
 }
 
-/* Celular pequeno */
-@media (max-width: 576px) {
-  .precos {
-    margin-top: -1rem; /* Começa a subir dentro do carrossel */
-  }
-}
-
-/* Telas bem pequenas (tipo iPhone SE) */
 @media (max-width: 400px) {
+  .gambi{
+    margin-top: -25%;
+  }
   .precos {
-    margin-top: -3rem;
+    margin-top: -1rem;
+  }
+
+  .overlay-central h2 {
+    font-size: 1.2rem;
+  }
+
+  .overlay-central p {
+    font-size: 0.95rem;
+  }
+
+  .overlay-central {
+    padding: 1rem;
   }
 }
-
