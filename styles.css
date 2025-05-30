@@ -51,6 +51,20 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
+.modal-content {
+  border: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+.bosta{
+  border: 1px solid red;
+  
+}
+.fifinho{
+  border: 1px solid green;
+  /* width: 450px; */
+  
+}
+
  /* Padrão para desktop */
 
 
@@ -68,7 +82,7 @@ body {
   /* Overlay central fixa sobre o carrossel */
 .overlay-central {
   position: absolute;
-  top: 47%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(33, 37, 41, 0.9); /* Cinza escuro com transparência */
