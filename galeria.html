@@ -29,7 +29,7 @@
 
 
 <div class="papai">
-    <h2 class="text-center text-white my-4">Trabalhos Anteriores</h2>
+    <h2 class="text-center text-white my-4">Nossa Galeria</h2>
     <div class="container my-5">
         <div class="row g-4 galeria">
           <div class="col-12 col-sm-6 col-md-3">
@@ -119,8 +119,71 @@
         
       </div>
       
-      
-
+      <!-- Modal do Carrossel -->
+<div class="modal fade" id="modalCarrossel" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content bg-dark text-light border-0">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div id="carouselFullscreen" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselFotos"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFullscreen" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselFullscreen" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const imagens = document.querySelectorAll(".foto-fixa");
+      const carouselInner = document.getElementById("carouselFotos");
+      const modal = new bootstrap.Modal(document.getElementById("modalCarrossel"));
+      const carousel = document.getElementById("carouselFullscreen");
+  
+      let imagensArray = [];
+  
+      // Armazena todas as imagens e adiciona evento de clique
+      imagens.forEach((img, index) => {
+        imagensArray.push(img.src);
+  
+        img.addEventListener("click", () => {
+          preencherCarrossel(index);
+          modal.show();
+        });
+      });
+  
+      function preencherCarrossel(indexInicial) {
+        carouselInner.innerHTML = ""; // Limpa anterior
+  
+        imagensArray.forEach((src, i) => {
+          const item = document.createElement("div");
+          item.className = "carousel-item" + (i === indexInicial ? " active" : "");
+  
+          const imagem = document.createElement("img");
+          imagem.src = src;
+          imagem.className = "d-block w-100";
+          imagem.style.objectFit = "contain";
+          imagem.style.height = "100vh";
+  
+          item.appendChild(imagem);
+          carouselInner.appendChild(item);
+        });
+  
+        // Força a atualização para o slide inicial
+        const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
+        bsCarousel.to(indexInicial);
+      }
+    });
+  </script>
+  
 </div>
 
   <footer class="text-center py-4 mt-5 border-top border-secondary">
