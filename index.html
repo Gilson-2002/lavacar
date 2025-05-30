@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="imagem/lavalogo.png" type="image/png">
+
   <title>Zézinho LavaCar</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
@@ -54,8 +56,10 @@
       <!-- Div estática centralizada sobre o carrossel -->
   <div class="overlay-central text-center">
     <img src="imagem/lavalogo.png" alt="Logo Zézinho LavaCar" width="150" height="150" class="mb-2" />
-    <h2 class="mb-2">Bem-vinde ao Zézinho LavaCar</h2>
+    <h2 class="mb-2">Bem-vindo ao Zézinho LavaCar</h2>
     <p>Lavação completa com qualidade e preço justo</p>
+    <p><img src="imagem/ligar3.png" alt="" style="width: 20px;"> (48) 98459-6603</p>
+
   </div>
     
     
@@ -63,39 +67,77 @@
      
     
       <div class="gambi">
+        
         <!-- Preços -->
-      <main class="container mt-5 precos">
-        <section class="row text-center g-4">
-          <div class="col-12 col-md-4">
-            <div class="card bg-secondary text-light h-100 shadow-lg">
-              <div class="card-body">
-                <h5 class="card-title">Carro Pequeno</h5>
-                <p class="card-text fs-4">R$ 70,00</p>
-              </div>
+        <main class="container mt-5 precos">
+          <section class="d-flex flex-wrap justify-content-center gap-4">
+            
+            <div style="width: 400px;">
+              <button class="card bg-secondary text-light shadow-lg border-0 w-100" data-bs-toggle="modal" data-bs-target="#modalMoto">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Moto</h5>
+                  <p class="card-text fs-4">R$ 70,00</p>
+                </div>
+              </button>
             </div>
-          </div>
-    
-          <div class="col-12 col-md-4">
-            <div class="card bg-secondary text-light h-100 shadow-lg">
-              <div class="card-body">
-                <h5 class="card-title">Carro Grande</h5>
-                <p class="card-text fs-4">R$ 120,00</p>
-              </div>
+        
+            <div style="width: 400px;">
+              <button class="card bg-secondary text-light shadow-lg border-0 w-100" data-bs-toggle="modal" data-bs-target="#modalPequeno">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Carro Pequeno</h5>
+                  <p class="card-text fs-4">R$ 90,00</p>
+                </div>
+              </button>
             </div>
-          </div>
-    
-          <div class="col-12 col-md-4">
-            <div class="card bg-secondary text-light h-100 shadow-lg">
-              <div class="card-body">
-                <h5 class="card-title">Moto</h5>
-                <p class="card-text fs-4">R$ 50,00</p>
-              </div>
+        
+            <div style="width: 400px;">
+              <button class="card bg-secondary text-light shadow-lg border-0 w-100" data-bs-toggle="modal" data-bs-target="#modalGrande">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Carro Grande</h5>
+                  <p class="card-text fs-4">R$ 120,00</p>
+                </div>
+              </button>
             </div>
-          </div>
-        </section>
-      </main>
+        
+          </section>
+        </main>
+        
 
       </div>
+
+      <!-- Modal Carro Pequeno -->
+<div class="modal fade" id="modalPequeno" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-light text-center p-4 rounded-4">
+      <img src="imagem/lavalogo.png" width="60" height="60" class="mx-auto mb-3" alt="Logo">
+      <h5>Carro Pequeno</h5>
+      <p>trabalhamos com a função "Leva e trás", atendemos de Segunda a Sabado das: 7:00 até as 19:00. Aceitamos dinheiro, Pix e cartão, entre em contato com nosso atendente para marcar um horario.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Carro Grande -->
+<div class="modal fade" id="modalGrande" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-light text-center p-4 rounded-4">
+      <img src="imagem/lavalogo.png" width="60" height="60" class="mx-auto mb-3" alt="Logo">
+      <h5>Carro Grande</h5>
+      <p>trabalhamos com a função "Leva e trás", atendemos de Segunda a Sabado das: 7:00 até as 19:00. Aceitamos dinheiro, Pix e cartão, entre em contato com nosso atendente para marcar um horario.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Moto -->
+<div class="modal fade" id="modalMoto" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-light text-center p-4 rounded-4">
+      <img src="imagem/lavalogo.png" width="60" height="60" class="mx-auto mb-3" alt="Logo">
+      <h5>Moto</h5>
+      <p>trabalhamos com a função "Leva e trás", atendemos de Segunda a Sabado das: 7:00 até as 19:00. Aceitamos dinheiro, Pix e cartão, entre em contato com nosso atendente para marcar um horario.</p>
+    </div>
+  </div>
+</div>
+
 
 </div>
 
